@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const StatisticList = ({ label, percentage }) => {
   return (
@@ -23,12 +23,12 @@ const StatisticList = ({ label, percentage }) => {
   );
 };
 
-StatisticList.defaultProps = {
-  // bla: 'test',
-};
+// StatisticList.defaultProps = {
+//   // bla: 'test',
+// };
 
-StatisticList.propTypes = {
-  // bla: PropTypes.string,
-};
+// StatisticList.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
 export default StatisticList;

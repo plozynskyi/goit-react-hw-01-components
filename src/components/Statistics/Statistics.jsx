@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import StatisticTitle from '../Statistics/StatisticTitle';
 import StatisticList from '../Statistics/StatisticList';
 
@@ -14,12 +14,12 @@ const Statistics = ({ stats }) => {
   );
 };
 
-Statistics.defaultProps = {
-  // bla: 'test',
-};
+// Statistics.defaultProps = {
+//   // bla: 'test',
+// };
 
-Statistics.propTypes = {
-  // bla: PropTypes.string,
-};
+// Statistics.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
 export default Statistics;
