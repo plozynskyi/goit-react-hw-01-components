@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { Discription } from '../Discription/Discription';
+import Discription from '../Discription/Discription';
 
-export const Profile = ({ users }) => {
+const Profile = ({ users }) => {
   return (
     <div className="profile">
       {users.map(({ username, tag, location, avatar, stats }) => (
@@ -25,5 +25,19 @@ Profile.defaultProps = {
 };
 
 Profile.propTypes = {
-  users: PropTypes.arrayOf(PropTypes.shape({})),
+  users: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      tag: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      stats: PropTypes.shape({
+        followers: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired,
+      }),
+    })
+  ),
 };
+
+export default Profile;

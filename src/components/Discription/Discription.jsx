@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const Discription = ({
+const Discription = ({
   username,
   tag,
   location,
@@ -12,13 +12,7 @@ export const Discription = ({
   return (
     <>
       <div className="description">
-        <img
-          src={avatar}
-          alt="User avatar"
-          className="avatar"
-          width={200}
-          height={200}
-        />
+        <img src={avatar} alt="User avatar" className="avatar" />
         <p className="name">{username}</p>
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
@@ -41,6 +35,10 @@ export const Discription = ({
   );
 };
 
+Discription.defaultProps = {
+  avatar: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/No_avatar.png',
+};
+
 Discription.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
@@ -50,3 +48,5 @@ Discription.propTypes = {
   views: PropTypes.number.isRequired,
   likes: PropTypes.number.isRequired,
 };
+
+export default Discription;
