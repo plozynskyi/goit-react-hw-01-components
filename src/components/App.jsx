@@ -1,7 +1,9 @@
-import user from '../data/user.json';
-import data from '../data/data.json';
+import { data, friends, user, transactions } from 'data';
+
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics';
+import Friends from './Friends/Friends';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
@@ -10,7 +12,7 @@ export const App = () => {
         // height: '100vh',
         backgroundColor: 'grey',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -19,6 +21,8 @@ export const App = () => {
     >
       <Profile users={user} />
       <Statistics stats={data} />
+      <Friends friends={friends} />
+      <TransactionHistory items={transactions} />;
     </div>
   );
 };

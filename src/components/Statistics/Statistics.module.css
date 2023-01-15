@@ -1,0 +1,28 @@
+.statistics {
+  background-color: brown;
+  border-radius: 50px;
+}
+
+.title {
+  margin: 0;
+  padding: 50px;
+  background-color: transparent;
+  text-align: center;
+}
+
+.stat {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.item {
+  margin: 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  background-color: aqua;
+}

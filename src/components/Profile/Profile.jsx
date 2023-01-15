@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Discription from '../Discription/Discription';
+import Discription from './Discription/Discription';
 
 const Profile = ({ users }) => {
   return (
