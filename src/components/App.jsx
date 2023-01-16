@@ -9,7 +9,6 @@ export const App = () => {
   return (
     <div
       style={{
-        // height: '100vh',
         backgroundColor: 'grey',
         display: 'flex',
         flexDirection: 'column',
@@ -20,7 +19,7 @@ export const App = () => {
       }}
     >
       <Profile users={user} />
-      <Statistics stats={data} />
+      <Statistics title="Upload stats" stats={data} />
       <Friends friends={friends} />
       <TransactionHistory items={transactions} />;
     </div>

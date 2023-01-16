@@ -1,18 +1,26 @@
 // import PropTypes from 'prop-types';
-import StatisticTitle from './Stat-components/StatisticTitle';
-import StatisticList from './Stat-components/StatisticList';
-import css from './Statistics.module.css';
 
-const Statistics = ({ stats }) => {
+import {
+  StatisticBox,
+  StatisticTitle,
+  StatisticList,
+  StatisticItem,
+  StatsText,
+} from './Statistic.styled';
+
+const Statistics = ({ title, stats }) => {
   return (
-    <section className={css.statistics}>
-      <StatisticTitle title="Upload stats" />
-      <ul className={css.stat}>
+    <StatisticBox>
+      <StatisticTitle>{title}</StatisticTitle>
+      <StatisticList>
         {stats.map(({ id, label, percentage }) => (
-          <StatisticList key={id} label={label} percentage={percentage} />
+          <StatisticItem key={id}>
+            <StatsText>{label}</StatsText>
+            <StatsText>{percentage}%</StatsText>
+          </StatisticItem>
         ))}
-      </ul>
-    </section>
+      </StatisticList>
+    </StatisticBox>
   );
 };
 
