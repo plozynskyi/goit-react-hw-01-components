@@ -1,4 +1,15 @@
 import PropTypes from 'prop-types';
+import {
+  User,
+  Description,
+  UserName,
+  UserInfo,
+  Stats,
+  Avatar,
+  StatsItem,
+  StatsLabel,
+  StatsQuantity,
+} from './discription.styled';
 
 const Discription = ({
   username,
@@ -10,33 +21,34 @@ const Discription = ({
   likes,
 }) => {
   return (
-    <>
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </>
+    <User>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <UserName>{username}</UserName>
+        <UserInfo>@{tag}</UserInfo>
+        <UserInfo>{location}</UserInfo>
+      </Description>
+      <Stats>
+        <StatsItem>
+          <StatsLabel>Followers</StatsLabel>
+          <StatsQuantity>{followers}</StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Views</StatsLabel>
+          <StatsQuantity>{views}</StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Likes</StatsLabel>
+          <StatsQuantity>{likes}</StatsQuantity>
+        </StatsItem>
+      </Stats>
+    </User>
   );
 };
 
 Discription.defaultProps = {
-  avatar: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/No_avatar.png',
+  avatar:
+    'https://cdn.pixabay.com/photo/2017/01/10/03/54/avatar-1968236_960_720.png',
 };
 
 Discription.propTypes = {

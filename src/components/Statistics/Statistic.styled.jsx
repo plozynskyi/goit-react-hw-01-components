@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 
 const StatisticBox = styled.section`
-  background-color: rgb(238, 229, 229);
+  background-color: rgba(214, 219, 135, 0.514);
+  margin-bottom: 30px;
 `;
 
 const StatisticTitle = styled.h2`
@@ -23,7 +24,6 @@ const StatisticItem = styled.li`
   padding: 15px 30px;
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
   text-align: center;
   ${statsBackgroundColor}
   ${statsColor}
@@ -32,7 +32,6 @@ const StatisticItem = styled.li`
 const StatsText = styled.span`
   font-size: 24px;
   font-weight: 500;
-  /* filter: invert; */
 `;
 
 function getRandomHexColor() {

@@ -1,38 +1,45 @@
-// import PropTypes from 'prop-types';
-
-import Transaction from './Transaction/Transaction';
-// import css from './Friends.module.css';
+import PropTypes from 'prop-types';
+import {
+  TransactionBox,
+  Table,
+  Thead,
+  Tbody,
+} from './transactionHistory.styled';
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
-      <tbody>
-        {items.map(({ id, type, amount, currency }) => (
-          <Transaction
-            key={id}
-            type={type}
-            amount={amount}
-            currency={currency}
-          />
-        ))}
-      </tbody>
-    </table>
+    <TransactionBox>
+      <Table className="transaction-history">
+        <Thead>
+          <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+          </tr>
+        </Thead>
+        <Tbody>
+          {items.map(({ id, type, amount, currency }) => (
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr>
+          ))}
+        </Tbody>
+      </Table>
+    </TransactionBox>
   );
 };
 
-// Friends.defaultProps = {
-//   // bla: 'test',
-// };
-
-// Friends.propTypes = {
-//   // bla: PropTypes.string,
-// };
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
+};
 
 export default TransactionHistory;

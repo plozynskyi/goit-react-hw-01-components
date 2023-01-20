@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import Discription from './Discription/Discription';
+import { ProfileBox } from './profile.styled';
 
 const Profile = ({ users }) => {
   return (
-    <div className="profile">
+    <ProfileBox>
       {users.map(({ username, tag, location, avatar, stats }) => (
         <Discription
           key={tag}
@@ -16,7 +17,7 @@ const Profile = ({ users }) => {
           likes={stats.likes}
         />
       ))}
-    </div>
+    </ProfileBox>
   );
 };
 

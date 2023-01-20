@@ -3,11 +3,44 @@
     "username": "Jacques Gluke",
     "tag": "jgluke",
     "location": "Ocho Rios, Jamaica",
-    "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/9483/9483967.png",
     "stats": {
       "followers": 5603,
       "views": 4827,
       "likes": 1308
+    }
+  },
+  {
+    "username": "Mask Min",
+    "tag": "MMask",
+    "location": "Retreat, Jamaica",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/9483/9483931.png",
+    "stats": {
+      "followers": 5678,
+      "views": 8765,
+      "likes": 4569
+    }
+  },
+  {
+    "username": "Dancer Lil",
+    "tag": "LDancer",
+    "location": "Three Hills, Jamaica",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/9483/9483971.png",
+    "stats": {
+      "followers": 2547,
+      "views": 1234,
+      "likes": 4321
+    }
+  },
+  {
+    "username": "Browns Qill",
+    "tag": "QBrowns",
+    "location": "Claremont, Jamaica",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/9483/9483968.png",
+    "stats": {
+      "followers": 9876,
+      "views": 4562,
+      "likes": 9898
     }
   }
 ]
