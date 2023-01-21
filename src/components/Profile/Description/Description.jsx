@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {
   User,
-  Description,
+  DescriptionBox,
   UserName,
   UserInfo,
   Stats,
@@ -9,9 +9,9 @@ import {
   StatsItem,
   StatsLabel,
   StatsQuantity,
-} from './discription.styled';
+} from './description.styled';
 
-const Discription = ({
+const Description = ({
   username,
   tag,
   location,
@@ -22,12 +22,12 @@ const Discription = ({
 }) => {
   return (
     <User>
-      <Description>
+      <DescriptionBox>
         <Avatar src={avatar} alt="User avatar" />
         <UserName>{username}</UserName>
         <UserInfo>@{tag}</UserInfo>
         <UserInfo>{location}</UserInfo>
-      </Description>
+      </DescriptionBox>
       <Stats>
         <StatsItem>
           <StatsLabel>Followers</StatsLabel>
@@ -46,12 +46,12 @@ const Discription = ({
   );
 };
 
-Discription.defaultProps = {
+Description.defaultProps = {
   avatar:
     'https://cdn.pixabay.com/photo/2017/01/10/03/54/avatar-1968236_960_720.png',
 };
 
-Discription.propTypes = {
+Description.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -61,4 +61,4 @@ Discription.propTypes = {
   likes: PropTypes.number.isRequired,
 };
 
-export default Discription;
+export default Description;

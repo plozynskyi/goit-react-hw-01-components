@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import Discription from './Discription/Discription';
+import Description from './Description/Description';
 import { ProfileBox } from './profile.styled';
 
 const Profile = ({ users }) => {
   return (
     <ProfileBox>
       {users.map(({ username, tag, location, avatar, stats }) => (
-        <Discription
+        <Description
           key={tag}
           username={username}
           location={location}
