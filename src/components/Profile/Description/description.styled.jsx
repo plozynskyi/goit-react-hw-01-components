@@ -7,7 +7,7 @@ const User = styled.div`
   height: fit-content;
 `;
 
-const Description = styled.div`
+const DescriptionBox = styled.div`
   align-items: center;
   padding: 15px;
 `;
@@ -65,7 +65,7 @@ const StatsQuantity = styled.span`
 
 export {
   User,
-  Description,
+  DescriptionBox,
   UserName,
   UserInfo,
   Avatar,
